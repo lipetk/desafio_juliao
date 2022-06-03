@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #4a1aea;
+    font-family: fantasy;
+}
+
+.vaca {
+    width: 300px;
+    height: 300px;
+    transform: translateX(-200px);
+    position: relative;
+}
+
+body {
+    background-color: #000000;
+    font-family: Roboto, Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+    bottom: 200px;
+}
+
+.criar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(119, 0, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --cor-neon: #ee00ff;
+}
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--cor-neon))
+    }
+    to {
+        filter: drop-shadow(0 0 30px var(--cor-neon))
+    }
+}
+
+.criar {
+    animation: neon 3s alternate infinite ease-in-out;
+}
+
+h1 {
+    animation: neon 3s alternate infinite ease-in-out;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: rgb(119, 0, 255);
+}
+
+form {
+    margin: 20px 0;
+    background-color: rgba(40, 40, 40, 0.784);
+    padding: 30px 25px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-left-color: blue;
+    border-right-color: crimson;
+    border-top-color: blueviolet;
+    border-bottom-color: blueviolet;
+}
+
+.criar {
+    animation: fade 0.2s;
+    animation: move 600ms;
+}
+
+form .input-block {
+    margin-bottom: 20px;
+}
+
+form .input-block input {
+    width: 100%;
+    display: block;
+    padding: 7px;
+    font-size: 16px;
+    color: #4a1aea;
+    outline-color: #4a1aea;
+    border-color: rgb(119, 0, 255);
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+input {
+    background-color: rgba(40, 40, 40, 0.784);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form .logar {
+    display: block;
+    min-width: 120px;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+    background-color: rgb(119, 0, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-color: var(--cor-neon);
+}
+
+.logar:hover {
+    background-color: #9d00ff;
+}
+
+
+/* animation form */
+
+h1 {
+    overflow: hidden;
+    animation: fade 0.2s;
+    animation: move 300ms;
+    animation-fill-mode: backwards;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form {
+    overflow: hidden;
+    animation: fade 0.2s;
+}
+
+form .input-block:nth-child(1) {
+    animation: move 500ms;
+}
+
+form .input-block:nth-child(2) {
+    animation: move 400ms;
+    animation-delay: 100ms;
+    animation-fill-mode: backwards;
+}
+
+form .btn-login {
+    animation: move 400ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* animation squares */
+
+body {
+    overflow: hidden;
+}
+
+.squares li {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 4s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-800px) rotate(800deg);
+    }
+}
